@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+        *{
+          font-family: "Truculenta", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: weight;
+          font-style: normal;
+        }
+
+        .contenedor {
+          border-radius: 5px;
+          background-color: #30d5e0;
+          padding: 20px;
+        }
+
+        label {
+          display: block;
+          margin: .5em 0 0 0;
+          }
+
+        .btn {
+          display: block;
+          margin: 1em 0;
+          }
+        
+        #subject {  
+          height: 100px;
+          width: 1400px;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <form class="form" action="/action_page.php" method="get" target="_blank">
+      <div class="contenedor">
+      <fieldset>
+        <legend align="center">DATOS PERSONALES</legend>
+
+        <label for="nombre">Nombre</label>
+        <input type="text"  id="nombre" name="nombre" size="20"/>
+
+        <label for="paterno">Apellido Paterno</label>
+        <input type="text" id="paterno" name="paterno" size="20" />
+
+        <label for="materno">Apellido Materno</label>
+        <input type="text" id="materno" name="materno" size="20"/>
+
+        <label for="sexo">Sexo</label>
+        <select class="sexo" name="sexo">
+            <option value="hombre">Hombre</option>
+            <option value="mujer" selected>Mujer</option>
+            <option value="indefinido">Indefinido </option>
+        </select>
+          
+        <label for="rfc">Numero de telefono</label>
+        <input type="text" id="numero" name="numero" size="20" maxlength="10" pattern="[0-9]"/>
+        
+        <label>
+            Fecha de nacimiento
+            <br>
+            <input type="date" name="fecha" value=""> <br>
+            
+        </label>
+
+        <label for="EstadoC">Estado Civil</label>
+        <select class="EstadoC" name="EstadoC">
+            <option value="soltero">Soltero</option>
+            <option value="casado" selected>Casado</option>
+            <option value="divorciado">Divorciado</option>
+        </select>
+
+        <label for="direccion">Direccion</label>
+        <input type="text" id="direccion" name="direccion" size="30" maxlength="30" pattern="[A-Za-z]{4}[0-9]{6}[A-Za-z0-9]{3}"/>
+                    <!--disabled-->
+
+        </fieldset>
+      </div>
+        <br>
+      <div class="contenedor">
+        <fieldset>
+        <legend align="center">DATOS ESCOLARES</legend>
+        <label for="nombre">Nombre</label>
+        <input type="text"  id="nombre" name="nombre" size="20"/>
+
+        <label for="paterno">Apellido Paterno</label>
+        <input type="text" id="paterno" name="paterno" size="20" />
+
+        <label for="materno">Apellido Materno</label>
+        <input type="text" id="materno" name="materno" size="20"/>
+
+        <label for="numc">Numero de Control</label>
+        <input type="text" id="numc" name="numc" size="0" maxlength="8" pattern="[0-9]"/>
+
+        <label for="rfc">Semestre</label>
+        <input type="text" id="semestre" name="semestre" size="30" maxlength="1" pattern="[0-9]"/>
+
+        <label for="rfc">CURP</label>
+        <input type="text" id="rfc" name="rfc" size="30" maxlength="13" pattern="[A-Za-z]{4}[0-9]{6}[A-Za-z0-9]{3}"/>
+
+        </fieldset>
+      </div>
+        <br>
+
+      <div class="contenedor">
+        <fieldset>
+          <legend align="center">PROYECTOS REALIZADOS</legend>
+          <p> Aqui podras poner archivos de tus proyectos realizados, asi mismo videos de su funcionamiento </p>          
+          <textarea id="subject" name="subject" placeholder="Explicame brevemente de que consisten"></textarea>
+          <p> ARCHIVO PDF </p>
+          <input type="file" id="proyecto" name="proyecto" accept="application/pdf" multiple><br>
+          <p> VIDEO mp4</p>
+          <input type="file" name="video" id="video" accept="video/*" multiple>
+        </fieldset>
+      </div>
+      
+        <br>
+        <center><button type="reset">Limpiar</button>
+        <input class="btn" type="submit" value="Enviar Informacion" /></center>
+      </form>
+  </body>
+</html>
